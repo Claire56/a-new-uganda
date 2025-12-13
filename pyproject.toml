@@ -1,0 +1,14 @@
+[project]
+name = "a-new-uganda"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "black>=25.12.0",
+    "langchain>=1.1.3",
+    "langchain-community>=0.4.1",
+    "langchain-openai>=1.1.3",
+    "langchain-pinecone>=0.2.13",
+    "python-dotenv>=1.2.1",
+]
