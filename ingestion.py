@@ -1,4 +1,3 @@
-# import certifi , ssl
 import os
 from dotenv import load_dotenv
 
@@ -10,19 +9,14 @@ from langchain_pinecone import PineconeVectorStore
 
 load_dotenv()
 
-# configure ssl context to use certifi certificates
-# ssl_context = ssl.create_default_context(cafile=certifi.where())
-# os.environ.get("SSL_CERT_FILE") = certifi.where()
-# os.environ.get("REQUEST_CA_BUNDLE") = certifi.where()
-
 def main():
     print("Hello from vector-bd-into!")
-    loader = TextLoader("./static/docs.txt")
+    loader = TextLoader("./nup.txt")
     document= loader.load()
 
     # Split the document robustly (handles long lines / no newlines better)
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=2000,
+        chunk_size=1000,
         chunk_overlap=150,
         separators=["\n\n", "\n", ". ", " ", ""],
     )
